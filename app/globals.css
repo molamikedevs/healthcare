@@ -275,6 +275,15 @@
   .date-picker {
     @apply overflow-hidden border-transparent w-full placeholder:text-dark-600  h-11 text-14-medium rounded-md px-3 outline-none !important;
   }
+
+  /* Custom styles for SweetAlert2 buttons */
+  .confirm-btn {
+    @apply bg-red-700 text-white !important;
+}
+
+.cancel-btn {
+    @apply bg-gray-700 text-white !important;
+}
 }
 
 /* =====  REACT-DATEPICKER OVERRIDES */
@@ -348,3 +357,5 @@
 .PhoneInputInput::placeholder {
   color: #1a1d21;
 }
+
+

@@ -41,6 +41,8 @@
 		"react-dropzone": "^14.2.3",
 		"react-hook-form": "^7.51.4",
 		"react-phone-number-input": "^3.4.1",
+		"sweetalert": "^2.1.2",
+		"sweetalert2": "^11.12.4",
 		"tailwind-merge": "^2.3.0",
 		"tailwindcss-animate": "^1.0.7",
 		"twilio": "^5.0.4",

@@ -130,3 +130,19 @@ export const sendSMSNotification = async (userId: string, content: string) => {
 		console.error('An error occurred while sending sms:', error)
 	}
 }
+
+// delete appointment
+export const deleteAppointment = async (appointmentId: string) => {
+    try {
+        await databases.deleteDocument(
+            DATABASE_ID!,
+            APPOINTMENT_COLLECTION_ID!,
+            appointmentId
+        )
+
+        revalidatePath('/admin')
+    } catch (error) {
+        console.log('Error deleting appointment:', error)
+    }
+}
+

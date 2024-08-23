@@ -7,6 +7,7 @@ import { Doctors } from '@/constants'
 import Image from 'next/image'
 import AppointmentModal from '../AppointmentModal'
 import { Appointment } from '@/types/appwrite.types'
+import DeleteAppointment from '../DeleteAppointment'
 
 export const columns: ColumnDef<Appointment>[] = [
 	{
@@ -68,7 +69,7 @@ export const columns: ColumnDef<Appointment>[] = [
 		header: () => <div className="pl-4">Actions</div>,
 		cell: ({ row: { original: data } }) => {
 			return (
-				<div className="flex gap-1">
+				<div className="flex items-center gap-1">
 					<AppointmentModal
 						type="schedule"
 						appointment={data}
@@ -82,6 +83,18 @@ export const columns: ColumnDef<Appointment>[] = [
 						userId={data.userId}
 						patientId={data.patient.$id}
 					/>
+				</div>
+			)
+		},
+	},
+
+	{
+		accessorKey: 'delete',
+		header: () => <div className="">Delete</div>,
+		cell: ({ row }) => {
+			return (
+				<div className="flex items-center gap-1">
+					<DeleteAppointment type="delete" appointmentId={row.original.$id} />
 				</div>
 			)
 		},

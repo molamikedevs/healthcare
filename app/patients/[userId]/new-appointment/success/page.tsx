@@ -26,9 +26,10 @@ const Success = async ({
 				<section className="flex flex-col items-center">
 					<Image
 						src={'/assets/gifs/success.gif'}
-						width={280}
-						height={300}
+						width={250}
+						height={280}
 						alt="success"
+						className="rounded-full"
 					/>
 
 					<h2 className="header mb-6 max-w-[600px] text-center">
